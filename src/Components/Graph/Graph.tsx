@@ -1,16 +1,6 @@
-import React from 'react'
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
-const options = {
-    title: {
-        text: 'My chart'
-    },
-    series: [{
-        data: [1, 2, 3]
-    }]
-}
-
-const options2 =  {
+﻿import Highcharts from "highcharts";
+import HighchartsReact from "highcharts-react-official";
+const options =  {
 
     title: {
         text: 'Solar Employment Growth by Sector, 2010-2016'
@@ -80,11 +70,16 @@ const options2 =  {
     }
 
 };
- const App = () => <div>
-    <HighchartsReact
-        highcharts={Highcharts}
-        options={options2}
-    />
-</div>
 
-export default App;
+export function Graph(){
+    
+    return(<>
+        <div>
+            <HighchartsReact
+                highcharts={Highcharts}
+                constructorType={'stockChart'}
+                options={options}
+            />
+        </div>
+    </>);
+}
