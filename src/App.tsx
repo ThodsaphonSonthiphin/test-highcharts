@@ -1,6 +1,9 @@
 import React from 'react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import {App2} from "./Components/Graph/app2";
+
+
 const options = {
     title: {
         text: 'My chart'
@@ -85,6 +88,7 @@ const options2 =  {
         highcharts={Highcharts}
         options={options2}
     />
+   <App2></App2>
 </div>
 
 export default App;
